@@ -18,6 +18,9 @@ from os import getcwd
 # independent of a particular computer.
 ROOT_PATH = getcwd()
 
+# The application base url configures the URL context of the application.
+# THe url will be used for example in email notifications.
+# For a productive system, this could read; 'http://www.bugex.com/bugexonline'
 APPLICATION_BASE_URL = 'http://localhost:8000'
 
 # A boolean that turns on/off debug mode.
@@ -112,7 +115,7 @@ STATIC_ROOT = '{0}/static'.format(ROOT_PATH)
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static/'
+STATIC_URL = '{0}/static/'.format(APPLICATION_BASE_URL)
 
 # Additional locations of static files
 STATICFILES_DIRS = (
