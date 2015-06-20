@@ -1,20 +1,22 @@
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>{% block title %}{% endblock title %}</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap-2.0.4.css">
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap-2.0.4-override.css">
- 	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/shCoreDefault.css">
+    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-2.0.4.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-2.0.4-override.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/shCoreDefault.css" %}">
  	
- 	<link rel="icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{% static "img/favicon.ico" %}" type="image/x-icon">
  	
- 	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script> 
-   	<script type="text/javascript" src="{{ STATIC_URL }}js/shCore.js"></script>
-	<script type="text/javascript" src="{{ STATIC_URL }}js/shBrushJava.js"></script>
-	<script type="text/javascript">SyntaxHighlighter.all();</script>  	
+    <script type="text/javascript" src="{% static "js/jquery-1.7.2.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/shCore.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/shBrushJava.js" %}"></script>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -29,7 +31,7 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand" href="{% url main-page %}"><img src="{{ STATIC_URL }}img/logo50px.png"></a>
+                    <a class="brand" href="{% url main-page %}"><img src="{% static "img/logo50px.png" %}"></a>
                     <ul class="nav pull-right">
                         {% block home %}<li><a href="{% url main-page %}">{% endblock home %}<i class="icon-home"></i> Home</a></li>
                         {% block howto %}<li><a href="{% url howto-page %}">{% endblock howto %}<i class="icon-question-sign"></i> HowTo</a></li>
