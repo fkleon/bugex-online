@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/pemistahl/bugex-online/master/images/bugex-online-logo-headline.png" />
+<img src="https://raw.github.com/fkleon/bugex-online/master/images/bugex-online-logo-headline.png" />
 
 A web application front end for BugEx, a tool that aims at helping developers understand a failure. Developed in the course of the Software Engineering lecture, summer term 2012, at the Software Engineering Chair, Saarland University, Saarbrücken, Germany. 
 
